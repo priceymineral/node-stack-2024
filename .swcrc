@@ -12,5 +12,5 @@
   "module": {
     "type": "commonjs"
   },
-  "sourceMaps": "inline"
+  "sourceMaps": "inline" // will allow for easier debugging when running in docker env
 }
