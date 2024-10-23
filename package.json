@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
     "start": "node dist/src/index.js",
-    "start:docker": "pnpm build && pnpm start"
+    "start:docker": "pnpm build && node --inspect=0.0.0.0 dist/src/index.js"
   },
   "keywords": [],
   "author": "",

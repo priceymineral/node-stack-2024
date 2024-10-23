@@ -1,4 +1,11 @@
 {
+  "triggerTaskOnSave.tasks": {
+    "restart backend": ["src/**/*"]
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  },
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
