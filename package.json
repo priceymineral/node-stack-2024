@@ -6,7 +6,10 @@
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
     "start": "node dist/src/index.js",
-    "start:docker": "pnpm build && node --inspect=0.0.0.0 dist/src/index.js"
+    "start:docker": "pnpm build && node --inspect=0.0.0.0 dist/src/index.js",
+    "db:migrate": "knex migrate:latest",
+    "docker:db:migrate": "docker compose run backend pnpx knex db:migrate",
+    "docker:db:migrate:undo": "docker compose run backend pnpx knex migrate:down"
   },
   "keywords": [],
   "author": "",
