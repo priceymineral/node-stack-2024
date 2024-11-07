@@ -1,6 +1,6 @@
 FROM node:20
 
-RUN npm i -g pnpm 
+RUN npm i -g pnpm
 
 WORKDIR /usr/src/app
 
@@ -13,4 +13,5 @@ RUN pnpx prisma generate
 COPY . .
 
 EXPOSE 8080
-CMD ["pnpm", "start"]
+CMD [ "pnpm", "start" ]
+
