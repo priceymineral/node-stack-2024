@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
     "start": "node dist/src/index.js",
-    "db:console": "docker compose run postgres psql -h localhost -U postgres -d webapp_dev",
+    "db:console": "docker compose run postgres psql -h postgres -U postgres -d webapp_dev",
     "start:docker": "pnpm build && node --inspect=0.0.0.0 dist/src/index.js",
     "db:migrate": "knex migrate:latest",
     "docker:db:migrate": "docker compose run backend pnpx knex db:migrate",
