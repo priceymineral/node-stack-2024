@@ -18,6 +18,7 @@ const run = async () => {
   });
 };
 
+// Auto-run if main script (not imported)
 if (require.main === module) {
   run().then(() => {
     console.log('Data seed complete');
