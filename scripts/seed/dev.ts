@@ -17,3 +17,10 @@ const run = async () => {
     ],
   });
 };
+
+if (require.main === module) {
+  run().then(() => {
+    console.log('Data seed complete');
+    process.exit();
+  });
+}
