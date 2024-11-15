@@ -40,58 +40,70 @@ This will execute the compiled code from the dist folder by running the entry po
 
 If you need to seed the database with sample data for local development:
 
-bash
-Copy code
+```bash
 pnpm seed:dev
+```
+
 This command runs a TypeScript script (scripts/seed/dev.ts) inside a Docker container running the backend service.
 
-4. Access the PostgreSQL Database Console
-   To open a PostgreSQL console for manual queries:
+### 4. Access the PostgreSQL Database Console
 
-bash
-Copy code
+To open a PostgreSQL console for manual queries:
+
+```bash
 pnpm db:console
+```
+
 This command runs psql inside a Docker container to connect to the PostgreSQL database running in the postgres container, using the database name webapp_dev.
 
-5. Start Backend with Docker (Debugging)
-   To start the backend inside Docker with debugging enabled:
+### 5. Start Backend with Docker (Debugging)
 
-bash
-Copy code
+To start the backend inside Docker with debugging enabled:
+
+```bash
 pnpm start:docker
+```
+
 This will:
 
 Build the project with pnpm build.
 Run the server with node --inspect=0.0.0.0 dist/src/index.js, allowing debugging from an external debugger (e.g., VS Code). 6. Run Database Migrations
 To apply the latest database migrations:
 
-bash
-Copy code
+```bash
 pnpm db:migrate
+```
+
 This command uses knex to run the migrations on your database.
 
-7. Run Database Migrations in Docker
-   To apply the latest migrations inside Docker:
+### 7. Run Database Migrations in Docker
 
-bash
-Copy code
+To apply the latest migrations inside Docker:
+
+```bash
 pnpm docker:db:migrate
+```
+
 This will run the migrations inside the backend container.
 
-8. Undo the Last Database Migration
-   If you need to roll back the last migration:
+### 8. Undo the Last Database Migration
 
-bash
-Copy code
+If you need to roll back the last migration:
+
+```bash
 pnpm docker:db:migrate:undo
+```
+
 This command undoes the last migration inside the backend Docker container.
 
-9. Rebuild the Backend (Docker)
-   If you need to rebuild the Docker backend service and restart it:
+### 9. Rebuild the Backend (Docker)
 
-bash
-Copy code
+If you need to rebuild the Docker backend service and restart it:
+
+```bash
 pnpm rebuild:be
+```
+
 This will:
 
 Rebuild the backend Docker image.
