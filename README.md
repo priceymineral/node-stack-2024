@@ -10,6 +10,7 @@ Before running the commands below, make sure you have the following installed:
 - **Node.js**: Make sure Node.js (and NPM) is installed on your machine.
 - **PNPM**: A fast, disk space-efficient package manager (if not installed, run `npm install -g pnpm`).
 - **Knex**: A SQL query builder for Node.js, usually installed via PNPM.
+- **Prisma**: Object-Relational Mappers (ORMs) for working with databases in Node.js
 
 ## Available Commands
 
